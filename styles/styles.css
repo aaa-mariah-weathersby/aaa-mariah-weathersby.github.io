@@ -1,0 +1,79 @@
+.branding + p {
+    margin-top: 0;
+}
+
+h1.branding {
+    font-family: Roboto;
+    font-size: 32pt;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+}
+
+h2.branding {
+    font-family: Roboto;
+    font-size: 24pt;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+}
+
+h3.branding {
+    font-family: Roboto;
+    font-size: 20pt;
+    font-weight: 200;
+    color: #555;
+    margin: 0;
+}
+
+/* -- PALETTE -- */
+
+.color_swatch {
+    position: relative;
+    margin-top: 100px;
+    display: inline-block;
+    margin-right: 2.5em;
+}
+
+.color_swatch::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 60px;
+    top: -75px;
+    
+}
+
+
+.color_swatch p {
+    margin: 0;
+    line-height: .5em;
+}
+
+.color_swatch sub {
+    color: #CCCCCC;
+}
+
+.action_blue::before {
+    background: #0099FF;
+}
+.ocean_blue::before {
+    background: #C3E7FF;
+}
+.aquamarine::before {
+    background: #8CCDF9;
+}
+.sick_blue::before {
+    background: #469BD4;
+}
+
+.silky_blue::before {
+    background: #59B1EC;
+}
+.deep_blue::before {
+    background: #043567;
+}
+.dead_gray::before {
+    background: #CCCCCC;
+}
