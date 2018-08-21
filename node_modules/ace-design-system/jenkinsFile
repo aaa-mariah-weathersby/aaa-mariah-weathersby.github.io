@@ -1,0 +1,41 @@
+pipeline {
+  agent any
+  stages {
+    stage("Install") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 8.11.3
+            npm install
+        """
+      }
+    }
+    stage("Test") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 8.11.3        
+        """
+      }
+    } 
+    stage("Build") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 8.11.3
+            npm run build
+        """
+      }
+    }    
+    stage("Deploy") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 8.11.3
+            npm adduser --registry=http://ace-lahq-nexus-alb-769347001.us-west-1.elb.amazonaws.com/repository/aaa-npm-private-hosted/_auth=YWRtaW46YWRtaW4xMjM=
+            npm publish
+        """
+      }
+    }  
+  }
+}

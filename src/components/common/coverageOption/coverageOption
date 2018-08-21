@@ -1,0 +1,87 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './coverageOption.css';
+import Button from '../button/button.secondary'
+import CoverageOptionSwitch from './coverageOptionSwitch'
+
+const CoverageOption = ( props ) => {
+
+  return (
+
+    <div className={"coverage-option-container"}>
+
+        <div className={"coverage-header-section"}>
+            <h3>{props.header}</h3>
+
+            <CoverageOptionSwitch 
+                optionDetails={props.optionDetails}
+            />
+            <CoverageOptionSwitch 
+                optionDetails={props.optionDetails}
+            />
+
+            <div className={"CTA-container"}>
+                <div className={"price CTA-box"}>
+                    <h5>Start today for</h5>
+                    <h4>{props.dollars}.<sup>{props.cents}</sup></h4>
+                </div>
+                <Button
+                    text={props.buttonTitle}
+                    isActive={props.isActive}
+                    action={props.action}
+                    componentId={props.buttonID}
+                    classCSS={"active button CTA-box secondary"}
+                />
+            </div>
+
+
+            <div 
+                className={"visible-toggle"}
+                onClick={props.toggleBehavior}
+            >
+                <h5>View Coverage Details</h5>
+            </div>
+
+            
+        </div>
+
+
+        { props.additionalInfo !== null
+            ? 
+            <div className={
+                props.additionalInfo ? " active coverage-dropdown" : " inactive coverage-dropdown"
+            }>
+
+                <div>
+                    
+                    {props.additionalInfoCopy}
+
+                    <h4>Coverage Details</h4>
+
+                    <div className={"coverage-details-section"}>
+                        <h5>Bodily Injury Liability</h5>
+                        <p>Bodily injury pays damages for people injured or killed in an accident for which you are leagally responsible.</p>
+                        <p>It also covers your legal defense if you are sued as a result of an accdient.</p>
+                        <h5 className={"adjustable-price"}>$15,000/$30,000</h5>
+                    </div>
+
+                    <div className={"coverage-details-section"}>
+                        <h5>Bodily Injury Liability</h5>
+                        <p>Bodily injury pays damages for people injured or killed in an accident for which you are leagally responsible.</p>
+                        <p>It also covers your legal defense if you are sued as a result of an accdient.</p>
+                        <h5 className={"adjustable-price"}>$15,000/$30,000</h5>
+                    </div>
+
+                </div>
+            </div>
+            : null
+        }
+</div>
+
+  )
+
+};
+
+export default CoverageOption;
+

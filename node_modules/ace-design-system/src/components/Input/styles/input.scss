@@ -1,0 +1,35 @@
+@import '../../../globals/styles/base/variables.scss';
+@import '../../../globals/styles/base/mixins.scss';
+
+
+.field_control {
+    margin: 1.5em 0 0;
+}
+
+.input_label {
+    transform: unset;
+    text-transform: capitalize;
+    top: -0.65em;
+    font-size: .9em;
+
+    // @include transition($args: all .35s linear);
+
+
+}
+
+.input{
+    border: solid $gray-primary thin; 
+    border-radius: 4px;
+
+    .input_field {
+        padding: 10px 12px;
+
+    }
+
+    // &:focus {
+    //     background: green;
+    //     border: solid green thin; 
+
+    // }
+
+}

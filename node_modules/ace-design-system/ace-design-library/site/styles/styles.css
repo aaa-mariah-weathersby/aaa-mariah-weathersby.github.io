@@ -1,0 +1,246 @@
+.branding + p {
+    margin-top: 0;
+    text-transform: none;
+}
+
+h1.branding {
+    font-family: Roboto;
+    font-size: 32pt;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+}
+
+h2.branding {
+    font-family: Roboto;
+    font-size: 24pt;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+}
+
+h3.branding {
+    font-family: Roboto;
+    font-size: 20pt;
+    font-weight: 200;
+    color: #555;
+    margin: 0;
+}
+
+h5.branding {
+    font-family: Roboto;
+    font-size: 16pt;
+    color: #777777;
+    margin: 0;
+}
+
+h6.branding {
+    font-family: Roboto;
+    font-size: 14pt;
+    color: #777777;
+    margin: 0;
+}
+
+a.links {
+    font-family: Roboto;
+    font-size: 16pt;
+    color: #0099FF;
+    margin: 0;  
+}
+
+
+/* -- PALETTE -- */
+
+.color_swatch {
+    position: relative;
+    margin-top: 100px;
+    display: inline-block;
+    margin-right: 2.5em;
+}
+
+.color_swatch::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    border-radius: 60px;
+    top: -75px;
+    
+}
+
+
+.color_swatch p {
+    margin: 0;
+    line-height: .5em;
+}
+
+.color_swatch sub {
+    color: #CCCCCC;
+}
+
+.action_blue::before {
+    background: #0099FF;
+}
+.ocean_blue::before {
+    background: #C3E7FF;
+}
+.aquamarine::before {
+    background: #8CCDF9;
+}
+.sick_blue::before {
+    background: #469BD4;
+}
+
+.silky_blue::before {
+    background: #59B1EC;
+}
+.deep_blue::before {
+    background: #043567;
+}
+.dead_gray::before {
+    background: #CCCCCC;
+}
+
+/* -- DEMO PRESETS -- */
+
+.demo {
+    background: #f2f2f2;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.demo > div, .demo > form {
+    margin: auto;
+}
+
+/* -- DEMO INPUTS -- */
+.demo_input {
+    display: flex;
+    flex-direction: column-reverse;
+    width: max-content;
+}
+
+.demo_input input {
+    border: solid #CCCCCC thin;
+    display: block;
+    margin-top: .5em;
+    padding: .75em .8em;
+    font-size: 1em;
+    border-radius: 3px;
+    transition: all .2s linear;
+
+}
+
+.demo_input label {
+    font-size: .85em;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: #80bdff;
+}
+
+input:focus + label{
+    color: #043567;
+}
+
+
+
+/* -- BUTTONS -- */
+button {
+    font-weight: 500;
+    font-size: 1em;
+    padding: .75em .85em;
+    min-width: 25%;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: .5em;
+
+    -webkit-transition: background-color .35s linear; /* Safari */
+    transition: background-color .35s linear;
+
+}
+
+button.idle {
+    border: solid thin #0099FF;
+    background: white;
+    color: #0099FF;
+}
+
+button.idle:hover {
+    background: #0099FF;
+    color: white;
+}
+
+button.active {
+    border: solid thin #0099FF;
+    background: #0099FF;
+    color: white;
+}
+
+button.deactive {
+    border: solid thin #CCCCCC;
+    background: #CCCCCC;
+    color: white;
+}
+
+
+/* -- HELPER -- */
+
+.helper{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: baseline;
+    /* overflow: hidden; 
+    max-height: 0px; */
+    margin-top: 1em;
+}
+
+.helper .content {
+    width: 301px;
+    background-color: #e0e0e0;
+    padding: .75em;
+    border-radius: 10px 10px 10px 0;
+    margin-left: 1em;
+    margin-top: auto;
+    display: flex;
+
+    /* transform: scale(0);
+    animation: helper-in .35s ease-out .8s forwards; */
+}
+
+.helper .content p {
+    margin: 0;
+    font-size: .95em;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    flex-shrink: 0;
+    background: blue;
+    margin-top: auto;
+    display: flex;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    /* -- DEMO PRESETS -- */
+    .demo {
+        flex-direction: column;
+    }
+    
+    /* -- BUTTONS -- */
+    button {
+        width: 100%;
+        margin: .25em 0;
+    }
+
+}

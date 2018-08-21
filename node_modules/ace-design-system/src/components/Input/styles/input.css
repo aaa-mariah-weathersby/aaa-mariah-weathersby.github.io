@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i");
+.field_control {
+  margin: 1.5em 0 0; }
+
+.input_label {
+  transform: unset;
+  text-transform: capitalize;
+  top: -0.65em;
+  font-size: .9em;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
+  transition:; }
+
+.input {
+  border: solid #ced4da thin;
+  border-radius: 4px; }
+  .input .input_field {
+    padding: 10px 12px; }
+  .input:focus {
+    background: green;
+    border: solid green thin; }

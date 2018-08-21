@@ -1,0 +1,60 @@
+@import '../../../globals/styles/base/variables.scss';
+@import '../../../globals/styles/base/mixins.scss';
+@import '../../../globals/styles/base/animations.scss';
+
+@import '../../../globals/styles/layout/layout.scss';
+
+.helper_container {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: baseline;
+    overflow: hidden; 
+    max-height: 0px;
+    margin-top: 1em;
+
+    @include animation(helper-container-in .75s linear .25s forwards);
+
+    @include respond-below(mob){
+        margin: auto;
+        margin-top: 1em;
+
+    }
+
+    .helper_face {
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        flex-shrink: 0;
+
+    }
+
+    .helper_content {
+        width: 301px;
+        background-color: $gray-helper;
+        padding: .75em;
+        border-radius: 10px 10px 10px 0;
+        margin-left: 1em;
+
+        @include transform(scale(0));
+        @include animation(helper-in .35s ease-out .8s forwards);
+
+        @include respond-below(mob){
+            width: 100%;            
+        }
+
+        p {
+            @include font-presets( $size: .95em );
+            margin: 0;
+            
+        }
+    
+    }
+
+    .helper_child {
+        margin-top: auto;
+        display: flex;
+    }
+    
+
+}

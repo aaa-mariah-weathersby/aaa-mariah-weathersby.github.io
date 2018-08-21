@@ -1,0 +1,53 @@
+@import 'base/animations.scss';
+@import 'base/base.scss';
+@import 'base/variables.scss';
+
+@import 'layout/layout.scss';
+
+body {
+}
+
+// -- Fonts -- //
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i');
+
+h1 {
+    @include font-presets(
+        $size: 1.5em, 
+        $weight: 700,  
+        $lh: auto        
+    )
+}
+
+h3 {
+    @include font-presets(
+        $size: 1.25em, 
+        $weight: 500,
+        $lh: auto        
+    )
+}
+
+p {
+    @include font-presets(
+        $size: .95em, 
+        $weight: 200,  
+        $lh: auto        
+    )    
+}
+
+a {
+    @include font-presets(
+        $size: .95em, 
+        $weight: 200,  
+        $color: $blue-primary,
+        $lh: auto        
+    )    
+}
+
+sub, sup {
+    @include font-presets(
+        $size: .75em, 
+        $weight: 200,  
+        $color: $font-secondary-color,
+        $lh: auto        
+    )   
+}

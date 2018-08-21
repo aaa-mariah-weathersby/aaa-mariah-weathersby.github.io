@@ -1,0 +1,67 @@
+.add-on, .add-on-B {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999999;
+    border-radius: 4px;
+    padding: 1em .75em;
+    margin-top: .5em;
+
+}
+
+.add-on-B {
+    border: none;
+    line-height: 1.5em;
+    font-size: .85em;
+    padding: 0;
+}
+
+.add-on .add-on-wrapper {
+
+}
+
+.add-on .add-on-wrapper .CTA-section, .add-on-B .add-on-wrapper .CTA-section {
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-bottom: 1em;
+
+}
+
+.add-on .add-on-wrapper .savings img, .add-on .add-on-wrapper .savings p {
+    display: inline-block;
+
+}
+
+.add-on .add-on-wrapper .savings img {
+    padding-right: 5px;
+    height: 15px;
+    width: auto;
+}
+
+.add-on .add-on-wrapper .savings p {
+    font-size: .95em;
+    font-weight: normal;
+}
+
+.add-on .add-on-wrapper .savings h5 {
+    color: #555555;
+    font-weight: normal;
+    padding-bottom: .25em;
+}
+
+.CTA-section .add-on-labels .monthly-price {
+    text-transform: none;
+
+}
+
+.CTA-section .add-on-labels h4 {
+    text-transform: uppercase;
+    color: #555555;
+    font-weight: normal;
+    padding-bottom: .25em;
+
+}
+
+.CTA-section .check {
+    margin-left: auto
+}

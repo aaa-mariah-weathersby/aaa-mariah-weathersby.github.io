@@ -1,0 +1,232 @@
+@-webkit-keyframes modal-slide-in {
+    0%   { transform: translateY(100%) }
+    100% { transform: translateY(0) }
+  }
+  @-moz-keyframes modal-slide-in {
+    0%   { transform: translateY(100%) }
+    100% { transform: translateY(0) }
+  }
+  @-o-keyframes modal-slide-in {
+    0%   { transform: translateY(100%) }
+    100% { transform: translateY(0) }
+  }
+  @keyframes modal-slide-in {
+    0%   { transform: translateY(100%) }
+    100% { transform: translateY(0) }
+  }
+
+  @-webkit-keyframes modal-fade-in {
+    0%   { opacity: 0 }
+    100% { opacity: 100% }
+  }
+  @-moz-keyframes modal-fade-in {
+    0%   { opacity: 0 }
+    100% { opacity: 100% }
+  }
+  @-o-keyframes modal-fade-in {
+    0%   { opacity: 0 }
+    100% { opacity: 100% }
+  }
+  @keyframes modal-fade-in {
+    0%   { opacity: 0 }
+    100% { opacity: 100% }
+  }
+
+
+.modal-viewport {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 100;
+
+    flex-direction: row;
+    align-content: center;
+    align-items: stretch;
+
+    text-align: left;
+
+    animation:  modal-fade-in .75s ease-out 0s forwards;
+
+   
+}
+#modal-exit {
+    text-align: right; 
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+}
+
+.modal-panel {
+
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    padding: 1em 1.5em;
+
+    height: 400px;
+    width: 450px;
+
+    border-radius: 15px;
+    background: white;
+}
+
+.modal-panel .content-viewport {
+    width: 80%;
+    margin: auto;
+    flex: 1;
+}
+
+
+.modal-container {
+    flex-grow: 1;
+    padding: 0 1.5em;
+
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.modal-container > div {
+    margin: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-panel h1 {
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    max-width: 100%;
+    text-align: center;
+
+}
+
+.modal-panel .toggle {
+    width: 100%;
+    margin: auto;
+}
+
+
+.modal-panel sub {
+    text-align: center;
+
+}
+
+
+.modal-panel .sub-content-wrapper {
+    width: 100%;
+}
+
+
+.modal-panel .sub-content-wrapper .button.secondary {
+    width: 100%;
+
+}
+
+.modal-tracker {
+    text-align: center;
+    font-size: .85em;
+    color: #555555;
+
+
+    position: absolute;
+    bottom: 10%;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+}
+
+
+@media (max-width: 600px) { 
+
+    .modal-viewport {
+        justify-content: baseline;
+        align-items: flex-end;
+    }
+
+    .modal-container > div {
+        margin: unset;
+        margin-bottom: auto;
+    }
+
+    .modal-panel {
+
+        display: -ms-flexbox;
+        display: flex;
+        margin: unset;
+
+        width: 100%;
+        height: 95%;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+        padding: 0;
+        transform: translateY(100%);
+
+        animation: modal-slide-in .925s ease-out .5s forwards;
+
+        /* display: flex;
+        margin-bottom: auto;
+        flex: 1;
+        height: 90%;
+    
+        border-radius: 15px 15px 0 0; */
+    }
+
+    .modal-panel .content-viewport {
+        width: 90%;
+
+    }
+
+    .modal-panel .modal-container {
+        flex: 1;
+        height: 100%;
+        padding: 0;
+        /* width: 100%; */
+    }
+
+    .modal-panel h1 {
+        font-size: 1.25em;
+        text-align: left;
+
+    }
+
+    .modal-panel #modal-exit {
+        padding: 1.25em;
+    }
+
+    .modal-panel .modal-container .button.secondary, .modal-panel .modal-container .button {
+        width: 100%;
+    }
+
+    .modal-panel .modal-container .helper-container {
+        width: 100%;
+    }
+
+    .modal-panel .modal-container .helper-content, .modal-panel .button {
+        width: 100%;
+    }
+
+    .modal-panel #home-proceed.button.secondary {
+        margin: unset;
+        margin-bottom: 1em;
+    }
+
+
+
+    .modal-tracker {
+        text-align: center;
+        font-size: .85em;
+        color: #555555;
+    
+        position: relative;
+        margin: auto;
+    
+    }
+
+ }

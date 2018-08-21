@@ -1,0 +1,82 @@
+
+#AppRoutes {
+
+    display: block;
+    height: auto;
+    /* overflow-x: hidden; */
+    max-width: 650px;
+    width: 85%;
+    height: auto;
+    margin: auto;
+    margin-top: 2.75em;
+    
+    /* display: flex; */
+    /* display: inline-block; */
+    /* align-content: center;
+    justify-content: center;
+
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    padding-top: 2em; */
+}
+
+/* #AppRoutes.spacer > div {
+    padding-bottom: 3em;
+} */
+
+#AppRoutes > div {
+    padding-bottom: 3em;
+}
+
+#AppRoutes > div {
+    position: relative;
+    height: auto;
+    /* flex: .425; */
+
+}
+
+#back-container {
+    display: flex;
+    margin: 1em 0 0 1em;
+}
+
+.back-icon {
+    height: 20px;
+    width: auto;
+}
+
+.back-copy {
+    color: #555555;
+    font-weight: normal;
+    margin-left: .25em;
+}
+
+.route-wrapper {
+    overflow-x: hidden;
+    display: flex;
+    /* flex: 1; */
+    width: 100%;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #AppRoutes {
+        padding: 7.5% 7.5% 15% 7.5%;
+    }
+    
+    #AppRoutes > div {
+        /* flex: .85; */
+        height: auto;
+        /* overflow: hidden; */
+    }
+    
+  }

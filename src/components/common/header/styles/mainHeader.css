@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    flex: 1;
+}
+
+header span {
+    display: inline-block;
+}
+
+.header-icon {
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;    
+}
+
+.header-sec {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    flex: 1 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    align-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;  
+}
+
+.header-sec.left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;  
+    flex: .25;
+    
+}
+
+#help-copy {
+    font-family: Roboto;
+    font-size: .95em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: right;
+    margin-right: .75em;
+    color: #555555;   
+    margin-top: auto;
+}
+
+#help-copy .link {
+    color: #4a90e2;
+    margin-left: .5em;
+}
+
+@media only screen and (max-width: 600px) {
+    #help-copy {
+        display: none;
+    }
+    
+  }

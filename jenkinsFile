@@ -1,0 +1,39 @@
+pipeline {
+  agent any
+  stages {
+    stage("Install") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 6.9.2
+            npm install
+        """
+      }
+    }
+    stage("Test") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 6.9.2        
+            npm run test
+        """
+      }
+    }
+    stage("Build") {
+      steps {
+        sh """
+            . ~/.nvm/nvm.sh
+            nvm use 6.9.2
+            npm run build
+        """
+      }
+    }    
+    stage("Deploy") {
+      steps {
+        withAWS(profile:'default') {
+          s3Upload(bucket:'autoclub-olb', file:'build', acl:'PublicRead')
+        }
+      }
+    }
+  }
+}

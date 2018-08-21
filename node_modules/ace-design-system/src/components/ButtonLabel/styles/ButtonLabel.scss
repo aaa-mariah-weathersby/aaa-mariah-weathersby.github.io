@@ -1,0 +1,13 @@
+@import '../../../globals/styles/base/mixins.scss';
+@import '../../../globals/styles/base/variables.scss';
+
+.button_label {
+    text-transform: none;
+    margin: .5em;
+
+    @include font-presets(
+        $size: 1em,
+        $weight: 400
+    )
+
+}
