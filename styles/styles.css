@@ -195,9 +195,12 @@ button.deactive {
     flex-direction: row;
     align-content: flex-end;
     justify-content: baseline;
-    /* overflow: hidden; 
-    max-height: 0px; */
+    overflow: hidden; 
+    max-height: 0px;
     margin-top: 1em;
+
+    animation: helper-container-in .75s linear .25s forwards;
+
 }
 
 .helper .content {
@@ -209,8 +212,8 @@ button.deactive {
     margin-top: auto;
     display: flex;
 
-    /* transform: scale(0);
-    animation: helper-in .35s ease-out .8s forwards; */
+    transform: scale(0);
+    animation: helper-in .35s ease-out .8s forwards; 
 }
 
 .helper .content p {
@@ -223,9 +226,13 @@ button.deactive {
     height: 35px;
     border-radius: 35px;
     flex-shrink: 0;
-    background: blue;
     margin-top: auto;
     display: flex;
+    background-image:url("https://raw.githubusercontent.com/aaa-mariah-weathersby/aaa-mariah-weathersby.github.io/master/images/fill-1%402x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: white;
 
 }
 
@@ -243,4 +250,27 @@ button.deactive {
         margin: .25em 0;
     }
 
+}
+
+/* -- ANIMATIONS -- */
+@keyframes helper-container-in {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 130px;       
+    }
+}
+
+@keyframes helper-in {
+    from {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);        
+    }
 }
